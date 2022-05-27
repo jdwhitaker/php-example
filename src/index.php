@@ -18,7 +18,12 @@ $conn = new mysqli(
     $_ENV['MYSQL_USER'],
     $_ENV['MYSQL_PASSWORD'],
     $_ENV['MYSQL_DATABASE']);
-if ($con->connect_error) die("Fatal Error: MySQL connect");
+if ($conn->connect_error) die("Fatal Error: MySQL connect");
 $query = "SELECT * FROM widgets";
 $result = $conn->query($query);
 if (!$result) die("Fatal Error: MySQL result");
+print_r($result);
+$rows = $result->fetch_all();
+print_r($rows);
+$result->close();
+$conn->close();
