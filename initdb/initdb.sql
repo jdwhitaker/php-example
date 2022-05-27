@@ -6,4 +6,5 @@ CREATE TABLE widgets (
 );
 
 INSERT INTO widgets(name, value) VALUES 
-  ('justins-widget', 'PHP is cool!');
+  ('justins-widget', 'PHP is cool!'),
+  ('john-widget', 'PHP sucks!');

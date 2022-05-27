@@ -16,7 +16,7 @@ services:
       - ./initdb:/docker-entrypoint-initdb.d
 
   php-example:
-    image: php-example
+    build: .
     restart: always
     environment:
       MYSQL_HOSTNAME: mysql
